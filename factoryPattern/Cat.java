@@ -1,14 +1,14 @@
 package factoryPattern;
 
 public class Cat implements Pet {
-    private Integer noOfLives;
+    private static Integer noOfLives;
 
-    public Integer getNoOfLives() {
+    public static Integer getNoOfLives() {
         return noOfLives;
     }
 
     public void setNoOfLives(Integer noOfLives) {
-        this.noOfLives = noOfLives;
+        Cat.noOfLives = noOfLives;
     }
 
     @Override
@@ -20,4 +20,6 @@ public class Cat implements Pet {
     public String play() {
         return "Catching/pursuing moving objects!";
     }
+
+    
 }
